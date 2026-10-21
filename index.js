@@ -12,6 +12,17 @@ app.route("/tuple")
     })
   })
 
+app.route("/triple")
+  .get((req, res) => {
+    res.send({
+      "randomTuple": [
+          Math.floor(Math.random() * 100),
+          Math.floor(Math.random() * 100),
+          Math.floor(Math.random() * 100)
+      ]
+    })
+  })
+
 app.listen(3000, () => {
   console.log("API running on port 3000.")
 })
