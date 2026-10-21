@@ -25,6 +25,13 @@ app.route("/triple")
     })
   })
 
+app.route("/random/:count")
+  .get((req, res) => {
+    res.send({
+      "randomNumbers": Array.from({ length: req.params.count }, getRandomInt)
+    })
+  })
+
 app.listen(3000, () => {
   console.log("API running on port 3000.")
 })
