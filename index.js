@@ -6,8 +6,8 @@ app.route("/tuple")
   .get((req, res) => {
     res.send({
         "randomTuple": [
-            Math.random(),
-            Math.random()
+            Math.floor(Math.random() * 100),
+            Math.floor(Math.random() * 100)
         ]
     })
   })
